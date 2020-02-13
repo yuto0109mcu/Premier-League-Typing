@@ -1,5 +1,5 @@
 const wordsToType = [
-   "BOURNEMOUTH",
+   "BOUR-EMOUTH",
    "ARSENAL",
    "ASTON VILLA",
    "BRIGHTON AND HOVE ALBION",
@@ -24,7 +24,7 @@ const wordsToType = [
    "VAN DIJK",
    "ALISSON",
    "ROBERTSON",
-   "ALEXANDER ANOLD",
+   "ALEXANDER-ANOLD",
    "MILNER",
    "FABINHO",
    "WIJNALDUM",
@@ -95,7 +95,7 @@ const wordsToType = [
    "LINDELOF",
    "PHIL JONES",
    "MAGUIRE",
-   "WAN BISSAKA",
+   "WAN-BISSAKA",
    "POGBA",
    "MATA",
    "LINGARD",
@@ -218,7 +218,7 @@ let already = 0
 let yet = 0
 let correct = 0
 let wrong = 0
-const typedLetter = "-"
+const typedLetter = "="
 const letterCount = document.querySelector("#letters")
 const missCount = document.querySelector("#miss")
 
@@ -238,7 +238,7 @@ const typedLetters = (e) => {
          wordToType = wordsToType[Math.floor(Math.random() * wordsToType.length)]
          clickStart.textContent = wordToType
       }
-   } else if (e.code[3] === "c") {
+   } else if (e.code[3] === "c" || e.code[3] === "u") {
       i++
       yet++
       already++
